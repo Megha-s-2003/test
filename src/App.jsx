@@ -9,6 +9,10 @@ function App() {
   function handleColor5() {
     setcolor5("green");
   }
+  const [color4, setColor4] = useState("white");
+  function handleColor4() {
+    setColor4("violet");
+  }
   return (
     <>
       <div>
@@ -29,6 +33,12 @@ function App() {
           style={{ backgroundColor: color5, color: "yellow" }}
         >
           Green
+</button>
+<button
+          onClick={handleColor4}
+          style={{ backgroundColor: color4, color: "yellow" }}
+        >
+          Violet
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
