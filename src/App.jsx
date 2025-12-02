@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0);
   const [color5, setcolor5] = useState("white");
   function handleColor5() {
@@ -12,6 +12,10 @@ function App() {
   const [color4, setColor4] = useState("white");
   function handleColor4() {
     setColor4("violet");
+  }
+  const [color3, setColor3] = useState("white");
+  function handleColor3() {
+    setColor3("Grey");
   }
   return (
     <>
@@ -33,12 +37,18 @@ function App() {
           style={{ backgroundColor: color5, color: "yellow" }}
         >
           Green
-</button>
-<button
+        </button>
+        <button
           onClick={handleColor4}
           style={{ backgroundColor: color4, color: "yellow" }}
         >
           Violet
+        </button>
+        <button
+          onClick={handleColor3}
+          style={{ background: color3, color: "yellow" }}
+        >
+          Grey
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
@@ -50,5 +60,3 @@ function App() {
     </>
   );
 }
-
-export default App;
