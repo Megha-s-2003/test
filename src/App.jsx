@@ -21,6 +21,11 @@ export default function App() {
   function handleColor2() {
     setColor2("Pink");
   }
+
+  const [color1, setColor1] = useState("white");
+  function handleColor1() {
+    setColor1("Blue");
+  }
   return (
     <>
       <div>
@@ -60,6 +65,12 @@ export default function App() {
         >
           Pink
         </button>
+         <button
+            onClick={handleColor1}
+            style={{ backgroundColor: color1, color: "yellow" }}
+          >
+            Blue
+          </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -70,3 +81,5 @@ export default function App() {
     </>
   );
 }
+
+export default App
